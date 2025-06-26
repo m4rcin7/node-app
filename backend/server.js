@@ -13,6 +13,15 @@ const app = express();
 
 app.use(express.json());
 
+app.get("/api/products", async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.status(200).json({ success: true, data: products });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
 app.post("/api/products", async (req, res) => {
   const product = req.body; // user will send product data in the request body
 
@@ -41,7 +50,7 @@ app.delete("/api/products/:id", async (req, res) => {
       .status(200)
       .json({ success: true, message: "Product deleted successfully" });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    res.status(404).json({ success: false, message: error.message });
   }
 });
 
