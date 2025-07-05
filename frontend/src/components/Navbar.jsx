@@ -1,11 +1,15 @@
+import { NavLink } from "react-router";
+
 export default function Navbar() {
   return (
     <header>
       <div>MyApp</div>
-      <div>
-        <a link="/">Home</a>
-        <a link="/create">Create Product</a>
-      </div>
+      <nav>
+        <NavLink to="/" end>
+          Home
+        </NavLink>
+        <NavLink to="/create">Create Product</NavLink>
+      </nav>
     </header>
   );
 }
