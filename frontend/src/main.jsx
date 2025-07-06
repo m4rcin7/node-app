@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CreateProduct from "./pages/CreateProduct";
 import HomePage from "./pages/HomePage";
 import Navbar from "./components/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
