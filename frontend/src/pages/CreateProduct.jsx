@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useProductStore } from "../store/product"
 
 export default function CreateProduct() {
   const [newProduct, setNewProduct] = useState({
