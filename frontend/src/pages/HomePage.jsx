@@ -1,16 +1,16 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { useProductStore } from "../store/product";
+import { useProductStore } from "../store/product";
 // import ProductCard from "../components/ProductCard";
 
 export default function HomePage() {
-  // const { fetchProducts, products } = useProductStore();
+  const { fetchProducts, products } = useProductStore();
 
-  // useEffect(() => {
-  //   fetchProducts();
-  // }, [fetchProducts]);
+  useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts]);
 
-  // console.log("products", products);
+  console.log("products", products);
 
   return (
     <div className="container py-5">
