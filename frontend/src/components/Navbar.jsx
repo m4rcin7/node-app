@@ -4,12 +4,10 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary bg-light">
       <div className="container-fluid">
-        {/* Logo */}
         <NavLink className="navbar-brand" to="/">
           MyStore
         </NavLink>
 
-        {/* Toggler */}
         <button
           className="navbar-toggler"
           type="button"
@@ -22,7 +20,6 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navigation Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
