@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useProductStore } from "../store/product";
-// import ProductCard from "../components/ProductCard";
+import ProductCard from "../components/ProductCard";
 
 export default function HomePage() {
   const { fetchProducts, products } = useProductStore();
@@ -28,23 +28,26 @@ export default function HomePage() {
       </div>
 
       <div className="row g-4">
-        {/* {products.map((product) => (
+        {products.map((product) => (
           <div key={product._id} className="col-12 col-md-6 col-lg-4">
-            <ProductCard product={product} /> 
+            <ProductCard product={product} />
           </div>
-        ))} */}
+        ))}
       </div>
 
-      {/* {products.length === 0 && ( */}
-      <div className="text-center mt-5">
-        <h5 className="text-muted fw-bold">
-          No products found 😢{" "}
-          <Link to="/create" className="text-primary text-decoration-underline">
-            Create a product
-          </Link>
-        </h5>
-      </div>
-      {/* )} */}
+      {products.length === 0 && (
+        <div className="text-center mt-5">
+          <h5 className="text-muted fw-bold">
+            No products found 😢{" "}
+            <Link
+              to="/create"
+              className="text-primary text-decoration-underline"
+            >
+              Create a product
+            </Link>
+          </h5>
+        </div>
+      )}
     </div>
   );
 }
